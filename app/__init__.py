@@ -66,7 +66,7 @@ def create_app(config_name: str) -> Flask:
 
         return jsonify(UserSchema(many=True).dump(users))
 
-    @app.route("/admin/users", methods=["GET"])
+    @app.route("/users/admin-only", methods=["GET"])
     @roles_required("admin")
     def users_admin():
 
