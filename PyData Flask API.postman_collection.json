@@ -54,7 +54,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"password\"\n}",
+					"raw": "{\n    \"username\": \"user\",\n    \"password\": \"pass\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -83,7 +83,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzMxNDc0MjEsImV4cCI6MTU3MzIzMzgyMSwianRpIjoiZTA4YTA2MTAtZjZmYy00YTU3LWE2YTAtMTNhODUzYzE4NjcyIiwiaWQiOjEsInJscyI6ImFkbWluIiwicmZfZXhwIjoxNTc1NzM5NDIxfQ.I3ouaqee-sKKB4Zx62zmMXQGH-GhRltrODuELo1KyN4",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzMxNTA2NzIsImV4cCI6MTU3MzIzNzA3MiwianRpIjoiMmM5N2RhMzItNTQwZS00M2JiLThkYzYtNWRiNTdmM2EwNDljIiwiaWQiOjIsInJscyI6IiIsInJmX2V4cCI6MTU3NTc0MjY3Mn0.ujhBykClCxBiQSNzRQlG0nThUg0RhXGgSpR8f75P4ww",
 							"type": "string"
 						}
 					]
@@ -112,7 +112,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzMxNDc0MjEsImV4cCI6MTU3MzIzMzgyMSwianRpIjoiZTA4YTA2MTAtZjZmYy00YTU3LWE2YTAtMTNhODUzYzE4NjcyIiwiaWQiOjEsInJscyI6ImFkbWluIiwicmZfZXhwIjoxNTc1NzM5NDIxfQ.I3ouaqee-sKKB4Zx62zmMXQGH-GhRltrODuELo1KyN4",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzMxNTA2NzIsImV4cCI6MTU3MzIzNzA3MiwianRpIjoiMmM5N2RhMzItNTQwZS00M2JiLThkYzYtNWRiNTdmM2EwNDljIiwiaWQiOjIsInJscyI6IiIsInJmX2V4cCI6MTU3NTc0MjY3Mn0.ujhBykClCxBiQSNzRQlG0nThUg0RhXGgSpR8f75P4ww",
 							"type": "string"
 						}
 					]
@@ -120,14 +120,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/users",
+					"raw": "http://localhost:5000/users/admin-only",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
-						"users"
+						"users",
+						"admin-only"
 					]
 				}
 			},
