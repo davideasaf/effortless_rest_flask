@@ -6,7 +6,7 @@ from typing import List
 from flask import Flask, jsonify, abort, request
 from flask_accepts import accepts, responds
 from flask_praetorian import Praetorian, auth_required, roles_required
-from flask_restplus import Api, Resource, Namespace
+from flask_restx import Api, Resource, Namespace
 from flask_sqlalchemy import SQLAlchemy
 from app.schemas import UserSchema, UserSchemaWithPassword
 

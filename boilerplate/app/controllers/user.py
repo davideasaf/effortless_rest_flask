@@ -2,7 +2,7 @@
 from flask import abort, jsonify, request
 from flask_accepts import responds, accepts
 from flask_praetorian import roles_required
-from flask_restplus import Namespace, Resource
+from flask_restx import Namespace, Resource
 
 from app import api, guard
 from app.models import User

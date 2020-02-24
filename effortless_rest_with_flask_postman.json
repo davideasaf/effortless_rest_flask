@@ -1,0 +1,122 @@
+{
+  "info": {
+    "_postman_id": "ccf31ead-a985-461e-b64a-cf0ad0e1b53f",
+    "name": "PyData Flask API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "login (Admin)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"admin\",\n    \"password\": \"password\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login (User)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"user\",\n    \"password\": \"pass\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Users (All Auth Users)",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzMxNTA2NzIsImV4cCI6MTU3MzIzNzA3MiwianRpIjoiMmM5N2RhMzItNTQwZS00M2JiLThkYzYtNWRiNTdmM2EwNDljIiwiaWQiOjIsInJscyI6IiIsInJmX2V4cCI6MTU3NTc0MjY3Mn0.ujhBykClCxBiQSNzRQlG0nThUg0RhXGgSpR8f75P4ww",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["users"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Users (Admin only)",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzMxNTA2NzIsImV4cCI6MTU3MzIzNzA3MiwianRpIjoiMmM5N2RhMzItNTQwZS00M2JiLThkYzYtNWRiNTdmM2EwNDljIiwiaWQiOjIsInJscyI6IiIsInJmX2V4cCI6MTU3NTc0MjY3Mn0.ujhBykClCxBiQSNzRQlG0nThUg0RhXGgSpR8f75P4ww",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/users/admin-only",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["users", "admin-only"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}

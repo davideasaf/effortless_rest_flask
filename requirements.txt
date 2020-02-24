@@ -56,3 +56,4 @@ wcwidth==0.1.7
 Werkzeug==0.16.0
 wrapt==1.11.2
 zipp==0.6.0
+flask_restx==0.1.1
